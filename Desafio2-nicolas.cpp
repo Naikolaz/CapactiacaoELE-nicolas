@@ -5,8 +5,10 @@ using namespace std;
 
 int main()
 {
-    char op;
+    char op, p;
     float a, b;
+
+    inicio:
 
     cout << "Qual operação você deseja?" << endl;
     cin >> op;
@@ -42,6 +44,15 @@ int main()
     default:
         break;
     }
+    
+    cout << "Deseja realizar outra operação (s/n)? " << endl;
+    cin >> p;
+
+    if (p == 's'){
+        goto inicio;
+    }
+    
+    cout << "Até logo! (:";
     
     return 0;
 }
